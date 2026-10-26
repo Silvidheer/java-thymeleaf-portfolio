@@ -50,7 +50,7 @@ public class PortfolioController {
                         "Spring Boot REST API",
                         "Backend Engineering",
                         "A REST API starter demonstrating layered architecture, request validation, and clear API contracts.",
-                        List.of("Java", "Spring Boot", "REST")
+                        List.of("Java", "Spring Boot", "REST API")
                 ),
                 new Project(
                         "Kafka Event-Driven POC",
@@ -59,10 +59,22 @@ public class PortfolioController {
                         List.of("Java", "Kafka", "Docker")
                 ),
                 new Project(
+                        "AI Chatbot",
+                        "AI Engineering",
+                        "An interactive AI chatbot concept built with React, featuring a responsive user interface, dynamic message rendering, and a foundation for integrating LLM-powered conversational capabilities.",
+                        List.of("React", "JavaScript", "Vite", "AI", "LLM")
+                ),
+                new Project(
                         "AI-Assisted Workflow",
                         "AI Engineering",
                         "A concept project for combining an LLM with approved tools, validation, and human review.",
                         List.of("Java", "LLM", "Workflow")
+                ),
+                new Project(
+                        "Data Science & Machine Learning — Predictive Analytics",
+                        "Data Science & Machine Learning",
+                        "Developed a machine learning workflow to analyze datasets, identify meaningful patterns, and generate data-driven predictions. Applied data preprocessing, exploratory data analysis (EDA), feature engineering, model training, and performance evaluation to translate raw data into actionable insights.",
+                        List.of("Python", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Scikit-learn")
                 )
         );
     }
