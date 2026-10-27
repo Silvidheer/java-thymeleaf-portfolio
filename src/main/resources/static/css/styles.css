@@ -90,7 +90,11 @@ h1 span { color: var(--accent); }
     .hero { grid-template-columns: 1fr; gap: 35px; padding-top: 65px; }
     .hero-card { max-width: 520px; }
     .two-column, .contact-layout { grid-template-columns: 1fr; gap: 28px; }
-    .skill-grid, .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .skill-grid,
+    .project-grid
+    {
+     //   grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 @media (max-width: 540px) {
     .container { width: min(100% - 30px, 1100px); }
@@ -105,3 +109,100 @@ h1 span { color: var(--accent); }
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
 }
+
+.featured-projects {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 70px 24px;
+}
+
+.featured-projects .eyebrow {
+    color: #267456;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.featured-projects h2 {
+    font-size: clamp(30px, 4vw, 44px);
+    margin-bottom: 16px;
+}
+
+.section-intro {
+    max-width: 680px;
+    color: #66736c;
+    line-height: 1.8;
+    margin-bottom: 32px;
+}
+
+.project-grid {
+    display: grid;
+   // grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.project-card {
+    padding: 26px;
+    border: 1px solid #e3e9e5;
+    border-radius: 16px;
+    background: #fff;
+}
+
+.project-category {
+    display: inline-block;
+    color: #267456;
+    background: #edf5f0;
+    padding: 7px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.project-card h3 {
+    font-size: 21px;
+    line-height: 1.4;
+    margin: 18px 0 10px;
+}
+
+.project-card p {
+    color: #66736c;
+    line-height: 1.8;
+}
+
+.technology-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 18px 0;
+}
+
+.technology-list span {
+    border: 1px solid #e3e9e5;
+    border-radius: 6px;
+    padding: 6px 9px;
+    font-size: 12px;
+}
+
+.project-type {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 8px;
+    color: #267456;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+@media (max-width: 680px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-projects {
+        padding: 45px 18px;
+    }
+}
+

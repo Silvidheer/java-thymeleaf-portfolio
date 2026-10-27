@@ -1,3 +1,180 @@
+<style>
+    .featured-projects {
+        --green: #267456;
+        --ink: #18231e;
+        --muted: #66736c;
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 76px 24px;
+        font-family: inherit;
+        color: var(--ink);
+    }
+
+    .featured-projects * {
+        box-sizing: border-box;
+    }
+
+    .fp-eyebrow {
+        color: var(--green);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 14px;
+    }
+
+    .fp-heading {
+        font-size: clamp(32px, 5vw, 48px);
+        line-height: 1.12;
+        letter-spacing: -1.5px;
+        margin: 0 0 16px;
+        font-weight: 800;
+    }
+
+    .fp-intro {
+        max-width: 680px;
+        color: var(--muted);
+        font-size: 17px;
+        line-height: 1.8;
+        margin: 0 0 36px;
+    }
+
+    .fp-grid {
+        display: grid;
+      //  grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .fp-card {
+        border: 1px solid #e3e9e5;
+        border-radius: 18px;
+        padding: 28px;
+        background: #fff;
+        transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .fp-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 32px rgba(24, 35, 30, .07);
+    }
+
+    .fp-number {
+        color: var(--green);
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        margin-bottom: 22px;
+    }
+
+    .fp-type {
+        display: inline-block;
+        background: #edf5f0;
+        color: var(--green);
+        border-radius: 100px;
+        padding: 7px 11px;
+        font-size: 12px;
+        font-weight: 700;
+        margin-bottom: 16px;
+    }
+
+    .fp-card h3 {
+        font-size: 23px;
+        line-height: 1.35;
+        margin: 0 0 12px;
+        letter-spacing: -.5px;
+    }
+
+    .fp-card p {
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.8;
+        margin: 0 0 20px;
+    }
+
+    .fp-label {
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    .fp-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .fp-tags span {
+        border: 1px solid #e3e9e5;
+        border-radius: 7px;
+        padding: 7px 10px;
+        color: #425148;
+        font-size: 12px;
+    }
+
+    .fp-footer {
+        border-top: 1px solid #e3e9e5;
+        margin-top: 22px;
+        padding-top: 17px;
+        color: var(--green);
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    .fp-cta {
+        margin-top: 32px;
+        padding: 26px;
+        background: #f3f7f4;
+        border-radius: 14px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .fp-cta p {
+        margin: 5px 0 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .fp-button {
+        display: inline-block;
+        flex-shrink: 0;
+        background: var(--green);
+        color: #fff !important;
+        text-decoration: none;
+        padding: 13px 19px;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .fp-button:hover {
+        background: #1d5b43;
+    }
+
+    @media (max-width: 680px) {
+        .featured-projects {
+            padding: 48px 18px;
+        }
+
+        .fp-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .fp-card {
+            padding: 23px;
+        }
+
+        .fp-cta {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+    }
+</style>
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -10,7 +187,7 @@
 <body>
 <header class="site-header">
     <nav class="nav container" aria-label="Main navigation">
-        <a class="brand" href="#home">SD<span>.</span></a>
+        <a class="brand" href="#home">Silvi Dheer<span>.</span></a>
         <div class="nav-links">
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
@@ -25,14 +202,14 @@
     <section class="hero container" id="home">
         <div class="hero-copy">
             <p class="eyebrow"><span class="status-dot"></span> OPEN TO REMOTE OPPORTUNITIES</p>
-            <h1>Building reliable software.<br><span>Exploring what’s next.</span></h1>
+            <h2>Architecting Scalable, Secure Enterprise Applications</h2>
+            <h4 class="hero-description">Java · Spring Boot · Microservices · REST APIs · Angular · Cloud Architecture</h4>
             <p class="hero-description">
-                I'm Silvi Dheer, a technology leader and hands-on software engineer focused on
-                frontend, backend systems, full-stack experiences, and practical AI-enabled solutions.
+                Experienced Technical Architect with enterprise application delivery experience, combining backend engineering, UI/UX, system integration and cross-functional technical leadership.
             </p>
             <div class="hero-actions">
-                <a class="button button-primary" href="#projects">Explore my work <span aria-hidden="true">↗</span></a>
-                <a class="button button-secondary" href="#contact">Let's connect</a>
+                <a class="button button-primary" href="#projects">View Case Studies<span aria-hidden="true">↗</span></a>
+                <a class="button button-secondary" href="#contact">GitHub Projects</a>
             </div>
             <div class="hero-meta">
                 <span>Java & Spring Boot</span><span>Full-stack delivery</span><span>AI-assisted engineering</span>
@@ -47,6 +224,58 @@
             <div class="mini-stat"><span>Core strength</span><strong>Backend & architecture</strong></div>
             <div class="mini-stat"><span>Approach</span><strong>Pragmatic, user-focused</strong></div>
         </aside>
+    </section>
+    <section id="featured-projects" class="featured-projects">
+        <p class="eyebrow">SELECTED WORK</p>
+
+        <h2>Featured Architecture Projects</h2>
+
+        <p class="section-intro">
+            Enterprise applications, backend architecture,
+            system integration, and hands-on technical experiments.
+        </p>
+
+        <div class="project-grid">
+
+            <article class="project-card"
+                     th:each="project : ${featuredProjects}">
+
+            <span class="project-category"
+                  th:text="${project.category}">
+                Enterprise Applications
+            </span>
+
+                <h3 th:text="${project.title}">
+                    Project Title
+                </h3>
+
+                <p th:text="${project.description}">
+                    Project description
+                </p>
+
+                <div class="technology-list">
+                <span th:each="technology : ${project.technologies}"
+                      th:text="${technology}">
+                    Java
+                </span>
+                </div>
+
+                <p class="project-type"
+                   th:text="${project.projectType}">
+                    Professional Experience
+                </p>
+
+                <a th:if="${project.githubUrl != null
+                        and !project.githubUrl.isBlank()}"
+                   th:href="${project.githubUrl}"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    View on GitHub →
+                </a>
+
+            </article>
+
+        </div>
     </section>
 
     <section class="section section-muted" id="about">
@@ -116,7 +345,7 @@
                 <div class="timeline-marker"></div>
                 <div>
                     <p class="timeline-date">CURRENT / MOST RECENT</p>
-                    <h3>Senior Technical Architect</h3>
+                    <h3>Sr. Technical Architect | Technical Architect</h3>
                     <p class="timeline-company">Hexaware Technologies · Client-facing delivery</p>
                     <p>Contributing to application architecture, frontend and backend delivery, quality, performance, and cross-functional execution.</p>
                 </div>

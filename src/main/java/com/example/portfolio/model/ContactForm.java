@@ -1,4 +1,4 @@
-package com.silvidheer.portfolio.model;
+package com.example.portfolio.model;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
