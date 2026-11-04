@@ -39,7 +39,7 @@ public class ProjectService {
                                 + "message processing.",
                         List.of("Java", "Spring Boot", "Kafka", "Docker"),
                         "Personal POC",
-                        "https://github.com/Silvidheer"
+                        "https://github.com/Silvidheer/Kafka_Poc"
                 ),
                 new Project(
                         "React — AI Chatbot",
@@ -49,7 +49,7 @@ public class ProjectService {
                                 + "the foundation for future LLM integration.",
                         List.of("React", "JavaScript", "Vite", "AI", "LLM"),
                         "Personal Experiment",
-                        "https://github.com/Silvidheer"
+                        "https://github.com/Silvidheer/chat-bot_React"
                 ),
                 // Project 5: Payment Transactions
                 new Project(
@@ -91,7 +91,7 @@ public class ProjectService {
                         List.of("Python", "Data Analysis", "Statistics",
                                 "Machine Learning", "Predictive Analytics"),
                         "Academic Projects",
-                        ""
+                        "https://github.com/Silvidheer"
                 ),
 
 // Project 8: BNY Mellon
